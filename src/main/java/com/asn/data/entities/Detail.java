@@ -1,6 +1,5 @@
 package com.asn.data.entities;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
@@ -9,7 +8,6 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 
 import lombok.EqualsAndHashCode;
@@ -31,16 +29,10 @@ public class Detail extends AbstractEntity {
     private Article article;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(nullable = false)
-    private Dette dette;
-    @Transient
-    private static int nbreDetail;
+    private Commande commande;
     
     public Detail() {
         createAt = LocalDateTime.now();
         updateAt = LocalDateTime.now();
-    }
-
-    public static int getNbreDetail() {
-        return ++nbreDetail;
     }
 }

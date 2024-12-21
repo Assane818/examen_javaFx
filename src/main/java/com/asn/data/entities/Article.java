@@ -28,8 +28,6 @@ public class Article extends AbstractEntity {
     private double prix;
     @Column(nullable = false)
     private double quantite;
-    @Transient
-    private static int nbreArticle;
     @OneToMany(mappedBy = "article")
     private List<Detail> details = new ArrayList<>();
 
@@ -39,9 +37,7 @@ public class Article extends AbstractEntity {
         updateAt = LocalDateTime.now();
     }
 
-    public static int getNbreArticle() {
-        return ++nbreArticle;
-    }
+    
 
     
 }

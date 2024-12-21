@@ -6,18 +6,16 @@
     <persistence-unit name="POSTGRESQLDETTES" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>com.asn.data.entities.Client</class>
-        <class>com.asn.data.entities.User</class>
         <class>com.asn.data.entities.Article</class>
-        <class>com.asn.data.entities.Dette</class>
+        <class>com.asn.data.entities.Commande</class>
         <class>com.asn.data.entities.Detail</class>
-        <class>com.asn.data.entities.Payement</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
             <property name="hibernate.hbm2ddl.auto" value="update" />
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
             <property name="javax.persistence.jdbc.url"
-                value="jdbc:postgresql://localhost:5433/gestion_dette" />
+                value="jdbc:postgresql://localhost:5433/examenJavaFx" />
             <property name="javax.persistence.jdbc.user" value="postgres" />
             <property name="javax.persistence.jdbc.password" value="Assane123" />
             <property name="hibernate.show_sql" value="false" />
